@@ -82,6 +82,12 @@
 		'imageFile' : 'style/page-to-top.png'
 	});
 
+	if (s.imAdv.show) {
+		s.imAdv.position = 'left-top';
+		s.imAdv.message = { media: { "type": "image", "url": x5engine.settings.currentPath + "images/pixabay-1470061.jpg", "width": 1280, "height": 840 }, effect: 'animated swing advertising' };
+		s.imAdv.message.media.onclick = function () { x5engine.utils.location('index.html', null, false); };
+		s.imAdv.attentionSeeker = { media: { "type": "image", "url": x5engine.settings.currentPath + "images/02.png", "width": 96, "height": 96 }, effect: 'animated swing' };
+	}
 	// Captcha
 	b.push(function () {
 		x5engine.captcha.instance = new x5engine.captcha.x5captcha({
